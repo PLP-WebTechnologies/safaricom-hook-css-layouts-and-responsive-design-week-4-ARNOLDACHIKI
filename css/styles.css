@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    background: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Main Content Area */
+main .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+main .content .image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        transition: all 0.3s ease;
+    }
+
+    main .content {
+        grid-template-columns: 1fr;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main .content {
+        grid-template-columns: 1fr;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (min-width: 1025px) {
+    main .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
